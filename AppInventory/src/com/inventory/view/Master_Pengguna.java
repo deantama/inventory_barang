@@ -288,7 +288,7 @@ public class Master_Pengguna extends javax.swing.JPanel {
         txtPassword.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         cbxLevel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        cbxLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Pilih Akses Level -", "Owner", "Staff" }));
+        cbxLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Pilih Akses Level -", "Owner", "Staff", "Admin" }));
 
         txtImagePath.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 

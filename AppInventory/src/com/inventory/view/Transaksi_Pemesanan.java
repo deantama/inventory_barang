@@ -482,10 +482,10 @@ public class Transaksi_Pemesanan extends javax.swing.JPanel {
         );
 
         jLabel21.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
-        jLabel21.setText("ID Distributor");
+        jLabel21.setText("ID Pelanggan");
 
         jLabel32.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
-        jLabel32.setText("Nama Distributor");
+        jLabel32.setText("Nama Pelanggan");
 
         btnDistributor.setText("...");
         btnDistributor.addActionListener(new java.awt.event.ActionListener() {
@@ -996,16 +996,9 @@ public class Transaksi_Pemesanan extends javax.swing.JPanel {
     private void txtJumlahKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtJumlahKeyTyped
         // TODO add your handling code here:
         char enter = evt.getKeyChar();
-//        System.out.println("Typing ISINYA : "+txtJumlah.getText());
-//        System.out.println(evt.toString());
         if(!(Character.isDigit(enter))){
             evt.consume();
-//            System.out.println("Masuk Bukan Angka");
         }
-//        else{
-//            System.out.println("Masuk Angka");
-//            this.getSubTotal();
-//        }
     }//GEN-LAST:event_txtJumlahKeyTyped
 
     private void txtJumlahKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtJumlahKeyReleased

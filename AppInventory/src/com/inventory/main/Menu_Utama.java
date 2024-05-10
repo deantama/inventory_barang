@@ -286,6 +286,7 @@ public class Menu_Utama extends javax.swing.JFrame {
 
     private void btn_settingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_settingsActionPerformed
         //Membuat instance JDialog
+        System.out.println("Masuk");
         Menu_Settings menu = new Menu_Settings(this, true, this);
         
         //Menampilkan JDialog dibawah button settings

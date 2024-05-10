@@ -388,6 +388,14 @@ public class Transaksi_BarangKeluar extends javax.swing.JPanel {
                 txtJumlahActionPerformed(evt);
             }
         });
+        txtJumlah.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtJumlahKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtJumlahKeyTyped(evt);
+            }
+        });
 
         jLabel36.setFont(new java.awt.Font("Poppins", 0, 14)); // NOI18N
         jLabel36.setText("Subtotal");
@@ -850,6 +858,7 @@ public class Transaksi_BarangKeluar extends javax.swing.JPanel {
         txtSatuan.setEnabled(false);
         txtHarga.setEnabled(false);
         txtStok.setEnabled(false);
+        txtSubtotal.setEnabled(false);
     }//GEN-LAST:event_btnBarangActionPerformed
 
     private void tblSementaraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSementaraMouseClicked
@@ -923,7 +932,34 @@ public class Transaksi_BarangKeluar extends javax.swing.JPanel {
         txtSubtotal.setEnabled(false);
     }//GEN-LAST:event_txtJumlahActionPerformed
 
+    private void txtJumlahKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtJumlahKeyTyped
+        // TODO add your handling code here:
+         char enter = evt.getKeyChar();
+        if(!(Character.isDigit(enter))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtJumlahKeyTyped
 
+    private void txtJumlahKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtJumlahKeyReleased
+        // TODO add your handling code here:
+        this.getSubTotal();
+    }//GEN-LAST:event_txtJumlahKeyReleased
+
+    private void getSubTotal(){
+        Long harga, subtotal;
+        int jumlah;
+        
+        harga   = Long.parseLong(txtHarga.getText());
+        String inputJumlah = txtJumlah.getText();
+        System.out.println(inputJumlah);
+        if (inputJumlah.isEmpty()) {
+            jumlah = 0;
+        } else {
+            jumlah = Integer.parseInt(inputJumlah);
+        }
+        subtotal = harga * jumlah;
+        txtSubtotal.setText(Long.toString(subtotal));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBarang;
     private javax.swing.JButton btnBatal;

@@ -46,6 +46,7 @@ public class Form_Login extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         bt_login = new javax.swing.JButton();
         background = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/com/inventory/img/icons8_depot_512px.png")).getImage());
@@ -139,6 +140,17 @@ public class Form_Login extends javax.swing.JFrame {
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/inventory/img/Login.png"))); // NOI18N
         jPanel2.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 5, 374, 360));
 
+        btnCancel.setBackground(new java.awt.Color(255, 0, 0));
+        btnCancel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancel.setText("CANCEL");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 220, 40));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 370));
 
         pack();
@@ -210,6 +222,11 @@ public class Form_Login extends javax.swing.JFrame {
         prosesLogin();
     }//GEN-LAST:event_bt_loginActionPerformed
 
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnCancelActionPerformed
+
     public static void main(String args[]) {
         FlatLightLaf.setup();
         UIManager.put("Button.arc", 10);
@@ -235,6 +252,7 @@ public class Form_Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton bt_login;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbPassword;
